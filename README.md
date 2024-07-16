@@ -2,7 +2,7 @@
 title: skill-match
 emoji: 👨🏼‍💻
 colorFrom: blue
-colorTo: white
+colorTo: gray
 sdk: gradio
 sdk_version: "latest"
 app_file: app.py
