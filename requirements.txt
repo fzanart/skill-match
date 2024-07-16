@@ -2,6 +2,7 @@
 langchain-core==0.2.13
 langchain-community==0.2.7
 langchain-google-genai==1.0.7
+transformers==4.42.4
 # html2text==2024.2.26
 # langchain-chroma==0.1.2
 # duckduckgo-search==6.1.12
