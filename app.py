@@ -1,7 +1,5 @@
-import os
 import gradio as gr
 from src.main import SkillMatch
-from aux.utils import query_api, initialize_llm
 
 resume = SkillMatch()
 job_ad = SkillMatch()
