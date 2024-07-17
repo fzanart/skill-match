@@ -70,7 +70,7 @@ class SkillMatch:
                     "word": x["value"],
                     "entity": "skill",
                 }
-                for x in [x.get("surfaceForm") for x in self.trace]
+                for x in self.trace
                 if not x["value"] == "r"
             ],
         }
