@@ -6,9 +6,6 @@ HUGGINGFACE_API_URL = "https://api-inference.huggingface.co/models/papluca/xlm-r
 LIGHTCAST_API_URL = "https://emsiservices.com/skills/versions/latest/extract/trace"
 HUGGINGFACE_TOKEN = os.environ.get("HF_API_KEY")
 LIGHTCAST_TOKEN = os.environ.get("LIGHTCAST_TOKEN")
-# Client ID: 2edh4p9j4jqdchzt
-# Secret: QVWZBHzl
-# Scope: emsi_open
 
 
 class SkillMatch:
