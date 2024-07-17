@@ -38,7 +38,7 @@ class SkillMatch:
             get_ligthcast_access_token(),
             params={"language": "en"},
         )
-
+        logging.info(type(skill_data))
         return skill_data
 
     def pipeline(self, text):
@@ -49,7 +49,7 @@ class SkillMatch:
             text = llm.invoke(f"Translate this document into English: '{text}'")
 
         skill_data = self.skills_detection(text)
-        logging.info(type(skill_data))
+        logging.info(str(skill_data))
 
         self.skills = [
             skill.get("skill").get("name")
