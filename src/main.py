@@ -1,6 +1,14 @@
 import os
 import gradio as gr
 from src.utils import query_api, initialize_llm, split_text, get_ligthcast_access_token
+import logging
+
+logging.basicConfig(
+    format="%(asctime)s %(levelname)s %(message)s",
+    datefmt="%m/%d/%Y %I:%M:%S %p",
+    level=logging.INFO,
+)
+
 
 HUGGINGFACE_API_URL = "https://api-inference.huggingface.co/models/papluca/xlm-roberta-base-language-detection"
 LIGHTCAST_API_URL = "https://emsiservices.com/skills/versions/latest/extract/trace"
@@ -41,6 +49,7 @@ class SkillMatch:
             text = llm.invoke(f"Translate this document into English: '{text}'")
 
         skill_data = self.skills_detection(text)
+        logging.info(str(skill_data))
 
         self.skills = [
             skill.get("skill").get("name")
