@@ -49,7 +49,7 @@ class SkillMatch:
             text = llm.invoke(f"Translate this document into English: '{text}'")
 
         skill_data = self.skills_detection(text)
-        logging.info(str(skill_data))
+        logging.info(type(skill_data))
 
         self.skills = [
             skill.get("skill").get("name")
