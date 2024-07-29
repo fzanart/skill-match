@@ -1,0 +1,63 @@
+Auditing
+Automation
+Bash (Scripting Language)
+Billing
+Bizagi
+Budgeting
+Business Process Management
+Capital Expenditure
+Cash Flow Management
+Collections
+Communication
+Data Analysis
+Data Science
+Data Visualization
+Deposit Accounts
+Effective Communication
+Error Detection And Correction
+Finance
+Financial Modeling
+Financial Planning
+Flask (Web Framework)
+Forecasting
+Generative Artificial Intelligence
+Git (Version Control System)
+Google Cloud Platform (GCP)
+Google Workspace
+Human Capital Management (HCM)
+Investments
+Invoicing
+Jupyter
+Key Performance Indicators (KPIs)
+LaTeX
+Leadership
+Machine Learning
+Management
+Management Reporting
+Matplotlib (Python Package)
+Microsoft Excel
+Month-End Closing
+Negotiation
+NumPy (Python Package)
+Operations
+Operations Management
+Pandas (Python Package)
+Payment Systems
+Planning
+Predictive Analytics
+Project Management
+Python (Programming Language)
+PyTorch (Machine Learning Library)
+Research
+Restructuring (Business)
+Sales
+SAP Applications
+SAP ERP
+Scheduling
+Scikit-Learn (Python Package)
+SciPy
+Seaborn
+SQL (Programming Language)
+Strategic Decision Making
+Strategic Prioritization
+Telecommunications

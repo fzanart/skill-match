@@ -20,7 +20,7 @@ with gr.Blocks() as demo:
     with gr.Row():
         with gr.Column():
             resume_input = gr.Textbox(
-                # value=sample_resume,
+                value="",  # default skills
                 placeholder="Enter your resume here...",
                 label="Resume Text",
             )

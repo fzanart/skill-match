@@ -67,18 +67,25 @@ class SkillMatch:
 
     def ner(self, text):
 
-        self.pipeline(text)
+        if not text.strip(""):
 
-        return {
-            "text": self.normalizedText,
-            "entities": [
-                {
-                    "end": x["sourceEnd"],
-                    "start": x["sourceStart"],
-                    "word": x["value"],
-                    "entity": "skill",
-                }
-                for x in self.trace
-                if not x["value"] == "r"
-            ],
-        }
+            with open("./default_skills.txt", "r") as f:
+                self.skills = [skill for skill in f.read().split("\n")]
+
+        else:
+
+            self.pipeline(text)
+
+            return {
+                "text": self.normalizedText,
+                "entities": [
+                    {
+                        "end": x["sourceEnd"],
+                        "start": x["sourceStart"],
+                        "word": x["value"],
+                        "entity": "skill",
+                    }
+                    for x in self.trace
+                    if not x["value"] == "r"
+                ],
+            }
