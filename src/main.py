@@ -1,7 +1,8 @@
 import os
+import time
+import logging
 import gradio as gr
 from src.utils import query_api, initialize_llm, split_text, get_ligthcast_access_token
-import logging
 
 logging.basicConfig(
     format="%(asctime)s %(levelname)s %(message)s",
@@ -24,12 +25,19 @@ class SkillMatch:
         self.trace = None
         self.normalizedText = None
 
-    def lang_detection(self, text):
-        language = query_api(
-            {"inputs": split_text(text)}, HUGGINGFACE_API_URL, HUGGINGFACE_TOKEN
-        )[0][0].get("label")
+    def lang_detection(self, text, max_attemps=5, wait_time=5):
 
-        return language
+        attempt = 0
+        while attempt < max_attemps:
+            try:
+
+                language = query_api(
+                    {"inputs": split_text(text)}, HUGGINGFACE_API_URL, HUGGINGFACE_TOKEN
+                )[0][0].get("label")
+                return language
+            except KeyError:
+                attempt += 1
+                time.sleep(wait_time * attempt)
 
     def skills_detection(self, text):
         skill_data = query_api(
