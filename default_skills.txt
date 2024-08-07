@@ -9,7 +9,6 @@ Capital Expenditure
 Cash Flow Management
 Collections
 Communication
-Data Analysis
 Data Science
 Data Visualization
 Deposit Accounts
@@ -30,7 +29,6 @@ Invoicing
 Jupyter
 Key Performance Indicators (KPIs)
 LaTeX
-Leadership
 Machine Learning
 Management
 Management Reporting
@@ -45,7 +43,6 @@ Pandas (Python Package)
 Payment Systems
 Planning
 Predictive Analytics
-Project Management
 Python (Programming Language)
 PyTorch (Machine Learning Library)
 Research
@@ -58,6 +55,5 @@ Scikit-Learn (Python Package)
 SciPy
 Seaborn
 SQL (Programming Language)
-Strategic Decision Making
 Strategic Prioritization
 Telecommunications

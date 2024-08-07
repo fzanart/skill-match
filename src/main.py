@@ -24,6 +24,7 @@ class SkillMatch:
         self.skills = None
         self.trace = None
         self.normalizedText = None
+        self.outline = None
 
     def lang_detection(self, text, max_attemps=5, wait_time=5):
 
@@ -64,6 +65,14 @@ class SkillMatch:
         ]
         self.trace = [x.get("surfaceForm") for x in skill_data.get("data").get("trace")]
         self.normalizedText = skill_data.get("data").get("normalizedText")
+        self.outline = llm.invoke(
+            f"""You are a professional resume writer, write the best professional outline for this position. Consider the following skills as critical:
+        [skills]:
+        {', '.join(self.skills)}
+        [position]:
+        {text}
+        """
+        )
 
     def ner(self, text):
 

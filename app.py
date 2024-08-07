@@ -14,6 +14,17 @@ def compare_skills():
     return f"Missing skills: {', '.join(missing_skills)}"
 
 
+def get_recommendations():
+
+    return f"""{compare_skills()}
+    
+    A professional summary should follow this formula: [Descriptive word] [your job title] [Experience level] [Work experience] [Skills] [Achievement].
+    Also: Skills/Experience/Accomplishments/Knowledge/Education at: https://www.careereducation.columbia.edu/resources/how-write-resume-profile-or-summary-statement
+    
+    Draft summary: {job_ad.outline}
+    """
+
+
 with gr.Blocks() as demo:
     gr.Markdown("# Resume and Job Ad Skill Comparison")
 
@@ -45,12 +56,12 @@ with gr.Blocks() as demo:
             )
 
     analyze_button = gr.Button("Analyze and Compare")
-    missing_skills_output = gr.Textbox(label="Missing Skills")
+    recommendations = gr.Textbox(label="Recommendations")
 
     analyze_button.click(
-        fn=lambda r, j: [resume.ner(r), job_ad.ner(j), compare_skills()],
+        fn=lambda r, j: [resume.ner(r), job_ad.ner(j), get_recommendations()],
         inputs=[resume_input, job_ad_input],
-        outputs=[resume_output, job_ad_output, missing_skills_output],
+        outputs=[resume_output, job_ad_output, recommendations],
     )
 
 demo.launch()
