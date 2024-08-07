@@ -66,7 +66,7 @@ class SkillMatch:
         self.trace = [x.get("surfaceForm") for x in skill_data.get("data").get("trace")]
         self.normalizedText = skill_data.get("data").get("normalizedText")
         self.outline = llm.invoke(
-            f"""You are a professional resume writer, write the best professional outline for this position. Consider the following skills as critical:
+            f"""You are a professional resume writer, write the best professional summary for this position. Consider the following skills as critical:
         [skills]:
         {', '.join(self.skills)}
         [position]:
